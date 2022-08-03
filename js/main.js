@@ -68,7 +68,7 @@ function themNhanVien() {
   //? check ngày làm
   isValid &=
     validation.checkEmpty(ngayLam, "tbNgay", "Vui lòng nhập thông tin") &&
-    validation.checkDate(ngayLam, "tbNgay", "Nhập đúng định dạng dd/mm/yyyy");
+    validation.checkDate(ngayLam, "tbNgay", "Nhập đúng định dạng mm/dd/yyyy");
 
   //? check lương
   isValid &=
