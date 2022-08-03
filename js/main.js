@@ -172,6 +172,14 @@ function capNhatNhanVien() {
 
   // Validation
   var isValid = true;
+  isValid &=
+  validation.checkEmpty(taiKhoan, "tbTKNV", "Vui lòng nhập thông tin") &&
+  validation.checkNumber(
+    taiKhoan,
+    "tbTKNV",
+    "Tài khoản không đúng định dạng"
+  );
+
   //? check họ tên
   isValid &=
     validation.checkEmpty(hoTen, "tbTen", "Vui lòng nhập thông tin") &&
@@ -244,14 +252,7 @@ getELE("btnCapNhat").onclick = capNhatNhanVien;
 
 function resetForm() {
   document.querySelector("form").reset();
-  getELE("tknv").value = "";
-  getELE("name").value = "";
-  getELE("email").value = "";
-  getELE("password").value = "";
-  getELE("datepicker").value = "";
-  getELE("luongCB").value = "";
   getELE("chucvu").selectedIndex = 0;
-  getELE("gioLam").value = "";
   getELE("tknv").disabled = false;
 }
 
